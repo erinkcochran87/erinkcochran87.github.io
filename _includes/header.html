@@ -1,0 +1,24 @@
+{% assign all-content = site.content | sort:"order" %}
+
+<header id="header">
+  <h1>{{ site.title }}</h1>
+  <nav>
+    <ul>
+      {% for item in all-content %}
+        <li><a href="#{{ item.section-title | downcase }}">{{ item.section-title }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>
+
+<section id="intro" class="main style1 dark fullscreen">
+    <div class="content">
+        <header>
+            <h2>We're gonna get marrieeeed</h2>
+        </header>
+        <p>And you're invited!</p>
+        <footer>
+            <a href="#about" class="button style2 down">Go!</a>
+        </footer>
+    </div>
+</section>

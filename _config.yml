@@ -1,0 +1,27 @@
+
+title: "sethanderinsbigfancy.party"
+name: "sethanderinsbigfancy.party"
+email: erin.seth.wedding@gmail.com
+description: |
+  Shit's gonna get real.
+
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+github_username: erinkcochran87
+
+
+sass:
+  sass_dir: _sass
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+
+collections:
+ content:
+  output: false
+
+venue: "General Warren Inne"
+venue-address: "9 Old Lancaster Rd, Malvern, PA 19355"
+venue-site: "https://www.generalwarren.com/"
+
+date: "October 13, 2018"

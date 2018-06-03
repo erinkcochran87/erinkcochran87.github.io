@@ -1,0 +1,26 @@
+
+{% if content.list-type == "structured" %}
+    <ul class="default">
+{% endif %}
+
+{% for item in content.list %}
+    {% case content.list-type %}
+
+        {% when 'structured' %}
+            <li><a href="{{ item.link }}">{{ item.name | append: "." }}</a></li>
+
+        {% when 'paragraph' %}
+            <p><strong>{{ item.name }}</strong><br>
+            {% for subitem in item.sublist %}
+                {% if subitem.link %}
+                    <a href="{{ subitem.link }}">{{ subitem.name | append: "." }}</a>
+                {% else %}
+                    {{ subitem.name | append: "." }}
+                {% endif %}
+            {% endfor %}
+    {% endcase %}
+{% endfor %}
+
+{% if content.list-type == "structured" %}
+    </ul>
+{% endif %}

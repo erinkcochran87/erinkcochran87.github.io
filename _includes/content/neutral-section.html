@@ -1,0 +1,8 @@
+<section id="{{ content.section-title | downcase }}" class="main style3 secondary">
+    <div class="content">
+        <header>
+            <h2><i class="{{ content.icon }}"></i> {{ content.section-title }}</h2>
+            {{ content.copy | flatify | markdownify }}
+        </header>
+    </div>
+</section>

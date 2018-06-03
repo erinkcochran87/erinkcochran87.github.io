@@ -1,0 +1,33 @@
+<section id="{{ content.section-title | downcase }}" class="main style3 primary">
+    <div class="content">
+        <header>
+            <h2><i class="{{ content.icon }}"></i> From then, til' now</h2>
+            <p>In case you haven't seen enough of our happy faces yet, here are some more pictures!</p>
+        </header>
+
+        <div class="gallery">
+            {% assign count = 0 %}
+
+            {% for file in site.data.images.gallery %}
+            {% capture loop-count %}
+                {{ count | plus: "1" }}
+            {% endcapture %}
+                {% assign count1 = loop-count %}
+
+                {% assign count2 = count1 | modulo:2 %}
+
+                {% case count2 %}
+                    {% when 0 %}
+                        <article class="from-left">
+                            <a href="images/{{ file.image }}" class="image fit"><img src="images/thumbs/{{ file.image }}" title="{{ file.caption }}" alt="" /></a>
+                        </article>
+                    {% else %}
+                        <article class="from-right">
+                            <a href="images/{{ file.image }}" class="image fit"><img src="images/thumbs/{{ file.image }}" title="{{ file.caption }}" alt="" /></a>
+                        </article>
+                {% endcase %}
+            {% endfor %}
+        </div>
+
+    </div>
+</section>

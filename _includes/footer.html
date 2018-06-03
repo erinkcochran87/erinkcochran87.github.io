@@ -1,0 +1,14 @@
+{% assign all-content = site.content | sort:"order" %}
+
+
+<footer id="footer">
+    <ul class="actions">
+        {% for item in all-content %}
+        <li><a href="#{{ item.section-title | downcase }}">{{ item.section-title }}</a></li>
+      {% endfor %}
+    </ul>
+
+    <ul class="menu">
+        <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+    </ul>
+</footer>
