@@ -654,9 +654,8 @@
 		-webkit-transition: background-color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out;
-		background-color: #98c593;
+		background-color: #406381;
 		border: 0;
-		border-radius: 3.5em;
 		color: #ffffff;
 		cursor: pointer;
 		display: inline-block;
@@ -711,7 +710,7 @@
 		input[type="reset"]:hover,
 		.button:hover,
 		button:hover {
-			background-color: #a8cea4;
+			background-color: #f3c46a;
 		}
 
 		input[type="button"]:active,
